@@ -12,10 +12,10 @@ app.listen(PORT ,() => {
 })
 
 app.get('/',(req,res) => {
-    res.send('Running on port 4000')
+    res.send('Running on port 443')
 })
 
 
 app.get('/article',(req,res) => {
-    res.send(articles)
+    res.send(articles[Math.floor(Math.random()*articles.length)]);
 })
